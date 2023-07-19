@@ -14,9 +14,9 @@ chmod u+x shell_scripts/basic_requirements.sh
 . "shell_scripts/basic_requirements.sh"
 
 #Running script to validate and genarat config file
-chmod u+x shell_scripts/config_file_generator.sh
-echo -e "\e[0;36m${bold}NOTE: We are going through a process of generating a configuration file. Please refer to the hints provided and enter the correct value${normal}"
-. "shell_scripts/config_file_generator.sh"
+#chmod u+x shell_scripts/config_file_generator.sh
+#echo -e "\e[0;36m${bold}NOTE: We are going through a process of generating a configuration file. Please refer to the hints provided and enter the correct value${normal}"
+#. "shell_scripts/config_file_generator.sh"
 
 # create a docker network using a defined subnet
 docker network create --driver=bridge --subnet=10.0.0.0/16 --gateway=10.0.0.1 cqube_net
@@ -59,7 +59,7 @@ fi
 access_type=$(awk ''/^access_type:' /{ if ($2 !~ /#.*/) {print $2}}' config_files/config.yml)
 if [[ $access_type == "VSK" ]]; then
    chmod u+x shell_scripts/program_selector.sh
-   . "shell_scripts/program_selector.sh"
+   #. "shell_scripts/program_selector.sh"
 else
    chmod u+x shell_scripts/national_program_selector.sh
    . "shell_scripts/national_program_selector.sh"
