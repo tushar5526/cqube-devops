@@ -1,0 +1,6 @@
+tasks:
+  - name: Setup
+    openMode: tab-after
+    init: |
+      sudo chmod u+x install.sh
+      sudo ./install.sh
