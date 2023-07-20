@@ -4,3 +4,14 @@ tasks:
     init: |
       sudo chmod u+x install.sh
       sudo ./install.sh
+
+ports:
+  - port: 4200
+    onOpen: ignore
+    visibility: public
+    description: Cqube Dashboard
+
+  - port: 8080
+    onOpen: ignore
+    visibility: public
+    description: Keycloak
