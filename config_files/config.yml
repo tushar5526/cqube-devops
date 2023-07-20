@@ -12,5 +12,3 @@ db_name: cqube
 db_password: cQube@123
 keycloak_adm_name: admin
 keycloak_adm_password: Admin@123
-dashboard_default_username: Cqube
-dashboard_default_password: Cqube@123
