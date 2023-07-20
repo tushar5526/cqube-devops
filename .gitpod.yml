@@ -2,6 +2,7 @@ tasks:
   - name: Setup
     openMode: tab-after
     init: |
+      sed -i "s#api_endpoint: localhost#api_endpoint: 4200-$GITPOD_WORKSPACE_URL#" config_files/config.yml
       sudo chmod u+x install.sh
       sudo ./install.sh
 
