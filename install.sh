@@ -75,6 +75,12 @@ fi
 
 echo '127.0.0.0' >> /etc/ansible/hosts
 
+echo "[defaults]" >> /etc/ansible/ansible.cfg
+echo "inventory = hosts" >> /etc/ansible/ansible.cfg
+echo "callbacks_enabled = profile_tasks" >> /etc/ansible/ansible.cfg
+echo "deprecation_warnings = False" >> /etc/ansible/ansible.cfg
+
+
 if [ ! $? = 0 ]; then
    tput setaf 1; echo "Error there is a problem installing Ansible"; tput sgr0
    exit
